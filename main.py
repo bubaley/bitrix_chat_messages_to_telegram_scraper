@@ -74,7 +74,7 @@ def main():
     send_messages(messages)
 
 
-schedule.every(30).seconds.do(main)
+schedule.every(10).seconds.do(main)
 
 if __name__ == "__main__":
     main()
