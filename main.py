@@ -71,7 +71,7 @@ def send_messages(messages):
 def main():
     messages = get_new_messages()
     print(f'Got messages: {len(messages)}')
-    # send_messages(messages)
+    send_messages(messages)
 
 
 schedule.every(30).seconds.do(main)
