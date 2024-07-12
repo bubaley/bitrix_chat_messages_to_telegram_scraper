@@ -43,7 +43,7 @@ def get_new_messages():
                 'date': message_date
             })
         if messages:
-            write_bitrix_last_message_id(results[0]['id'])
+            write_bitrix_last_message_id(messages[0]['id'])
         return results
     else:
         return []
@@ -71,7 +71,7 @@ def send_messages(messages):
 def main():
     messages = get_new_messages()
     print(f'Got messages: {len(messages)}')
-    send_messages(messages)
+    # send_messages(messages)
 
 
 schedule.every(30).seconds.do(main)
